@@ -155,38 +155,38 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Enhanced Form Validation
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = this.querySelector('input[type="text"]').value.trim();
-    const email = this.querySelector('input[type="email"]').value.trim();
-    const message = this.querySelector('textarea').value.trim();
-    
-    // Basic validation
-    if (!name || !email || !message) {
-      showNotification('Please fill in all fields', 'error');
-      return;
-    }
-    
-    if (!isValidEmail(email)) {
-      showNotification('Please enter a valid email address', 'error');
-      return;
-    }
-    
-    // Simulate form submission
-    showNotification('Thank you! Your message has been sent.', 'success');
-    this.reset();
-  });
-}
+// Contact Form Handling for Formspree
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
 
-// Email validation function
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
+  const name = this.querySelector('input[name="name"]').value.trim();
+  const email = this.querySelector('input[name="email"]').value.trim();
+  const message = this.querySelector('textarea[name="message"]').value.trim();
+
+  if (!name || !email || !message) {
+    alert('Please fill in all fields');
+    return;
+  }
+
+  // Send form data to Formspree
+  fetch("https://formspree.io/f/mdklpoeg", {
+    method: "POST",
+    headers: { "Accept": "application/json" },
+    body: new FormData(contactForm)
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("✅ Thank you! Your message has been sent.");
+      contactForm.reset();
+    } else {
+      alert("❌ Sorry, your message could not be sent.");
+    }
+  })
+  .catch(() => {
+    alert("❌ Error sending message. Please try again later.");
+  });
+});
+
 
 // Notification system
 function showNotification(message, type = 'info') {

@@ -36,7 +36,7 @@ body {
 
 header {
 
-  background: rgba(0, 0, 0, 0.95); /* Black background for better font visibility */
+  background: rgb(77, 13, 102); /* Deep blue background representing Diaspora unity */
   backdrop-filter: blur(10px);
   padding: 12px 0;
 
@@ -152,7 +152,7 @@ header {
 
 .socials .social-icons a:hover {
 
-  color: #FFFFFF;
+  color: white;
   transform: translateY(-5px) scale(1.2);
   text-shadow: 0 0 10px rgba(255, 248, 220, 0.5);
 }
@@ -285,9 +285,9 @@ header {
 
 .logo-img {
 
-  height: 60px;          /* Adjust size */
+  height: 50px;          /* Adjust size */
 
-  width: 60px;           /* Keep it square for perfect circle */
+  width: 50px;           /* Keep it square for perfect circle */
 
   border-radius: 50%;    /* Makes it round */
 
@@ -318,7 +318,7 @@ header {
 
   background: 
 
-    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    linear-gradient(rgba(3, 5, 7, 0.8), rgba(0, 2, 3, 0.925)),
     url("Img/afric.jpg") center/cover no-repeat;
 
   display: flex;
@@ -373,7 +373,7 @@ header {
   padding: 12px 24px;
 
   background: #8B4513; /* Warm brown to match navbar */
-  color: black;
+  color: #0d3b66;
 
   border-radius: 6px;
 
@@ -413,6 +413,7 @@ header {
   background: #ffffff !important;
   color: #222;
 
+
   margin-bottom: 50px;
 
   border-radius: 12px;
@@ -428,6 +429,23 @@ header {
 }
 
 
+.section p {
+  margin-bottom: 1.5rem;  /* Space between paragraphs */
+  font-size: 1.0rem;
+}
+.section .about-text {
+  margin-bottom: 1.5rem;  /* Space between paragraphs */
+  font-size: 1.0rem;
+  text-align: justify;
+}
+.section strong {
+  color: white;         /* Accent color for emphasis */
+}
+.section .strong1{
+    color: purple;         /* Accent color for emphasis */
+  font-size: 1.3rem;
+}
+
 
 .section h2 {
 
@@ -437,14 +455,14 @@ header {
 
   font-size: 1.9rem;
 
-  color: #000000; /* Changed to black as requested */
+  color: #3e0146; /* Changed to deep blue representing Diaspora */
 }
 
 
 
 /* Forums Section */
 .forums-section {
-  background-color:black;
+  background-color: #540d66;
   padding: 60px 0;
   color: #ffffff;
 }
@@ -461,7 +479,7 @@ header {
 }
 
 .forums-header h2 {
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
   font-size: 36px;
   margin-top: 15px;
   position: relative;
@@ -473,7 +491,6 @@ header {
   position: absolute;
   width: 60px;
   height: 3px;
-  background-color: black;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
@@ -490,7 +507,7 @@ header {
 .feature {
   display: flex;
   align-items: flex-start;
-  background-color:black;
+  background-color:  rgba(66, 4, 90, 0.95);
   padding: 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -500,7 +517,7 @@ header {
 .feature:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(255, 255, 255, 0.15);
-  background-color: black;
+  background-color:  rgba(66, 4, 90, 0.95);
 }
 
 .feature-icon {
@@ -533,8 +550,9 @@ header {
   color: #dddddd;
 }
 .forums-intro{
-  color: black;
-  font-size: 16px;
+  color:#222;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /* Forum Quote */
@@ -589,7 +607,7 @@ header {
   display: inline-block;
   padding: 12px 30px;
   background-color: #ffffff;
-  color: #000000;
+  color: #0d3b66;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
@@ -617,7 +635,7 @@ header {
   .forums-intro {
   font-size: 16px;
   margin-bottom: 25px;
-  color: black;
+  color: #222;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 25px;
@@ -722,10 +740,10 @@ header {
 
 .forum-tab {
   padding: 12px 24px;
-  background-color: black;
+  background-color:  rgba(66, 4, 90, 0.95);
   border: 2px solid #ffffff;
   border-radius: 30px;
-  color: #ffffff;
+  color: white;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -734,12 +752,12 @@ header {
 }
 
 .forum-tab:hover {
-  background-color: #444444;
+  background-color: purple;
 }
 
 .forum-tab.active {
   background-color: #ffffff;
-  color: #000000;
+  color: black;
   border-color: #ffffff;
 }
 
@@ -751,9 +769,9 @@ header {
 
 .forum-panel {
   display: none;
-  background-color: black;
+  background-color: rgba(66, 4, 90, 0.95);
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 20px rgba(107, 3, 121, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
   border-left: 5px solid #ffffff;
@@ -773,7 +791,7 @@ header {
   display: flex;
   align-items: center;
   padding: 25px 30px;
-  background-color: black;
+  background-color: rgba(66, 4, 90, 0.95);
   border-bottom: 1px solid #444444;
 }
 
@@ -790,7 +808,7 @@ header {
 }
 
 .forum-icon i {
-  color: #000000;
+  color: rgba(66, 4, 90, 0.95);
   font-size: 22px;
 }
 
@@ -835,19 +853,39 @@ header {
 
 .newcomers-header h2 {
   font-size: 2.5rem;
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
   margin-bottom: 20px;
   margin-top: 50px;
   font-weight: 700;
 }
 
 .newcomers-header .intro {
-  font-size: 16px;
-  color:black;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #222;
+  margin: 20px auto;      /* vertical spacing */
+  line-height: 1.8;       /* comfortable line height */
+  text-align: center;      /* center the text */
+  padding: 0 15px;         /* horizontal padding */
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .newcomers-header .intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newcomers-header .intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 10px;
+    text-align: center;   /* keep it centered on small screens */
+  }
+}
+
 
 /* Services Section */
 .services-section {
@@ -857,7 +895,7 @@ header {
 .services-section .section-title {
   text-align: center;
   font-size: 2rem;
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
   margin-bottom: 40px;
   font-weight: 600;
 }
@@ -888,7 +926,7 @@ header {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #000000, #333333);
+  background: linear-gradient(90deg, rgba(66, 4, 90, 0.95));
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -899,25 +937,24 @@ header {
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  border-color: #000000;
+  box-shadow:  rgba(66, 4, 90, 0.95);
+  border-color: rgba(66, 4, 90, 0.95);
 }
 
 .service-icon {
   font-size: 3rem;
   margin-bottom: 20px;
   display: block;
-  color: #000000;
 }
 
 .service-icon i {
   font-size: 3rem;
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
 }
 
 .service-card h4 {
   font-size: 1.3rem;
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
   margin-bottom: 15px;
   font-weight: 600;
 }
@@ -974,19 +1011,19 @@ header {
 
 .info-header h3 {
   font-size: 1.5rem;
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
   margin: 0;
   font-weight: 600;
 }
 
 .info-icon {
   font-size: 2rem;
-  color: #000000;
+  color: rgba(66, 4, 90, 0.95);
 }
 
 .info-icon i {
   font-size: 2rem;
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
 }
 
 .info-content {
@@ -1002,7 +1039,7 @@ header {
 }
 
 .bullet {
-  background: #000000;
+  background:  rgba(66, 4, 90, 0.95);
   color: white;
   width: 30px;
   height: 30px;
@@ -1022,7 +1059,7 @@ header {
 }
 
 .info-text strong {
-  color: #000000;
+  color:  rgba(66, 4, 90, 0.95);
   font-size: 1.1rem;
   display: block;
   margin-bottom: 5px;
@@ -1036,7 +1073,7 @@ header {
 
 /* CTA Section */
 .cta-section {
-  background: black;
+  background: rgba(66, 4, 90, 0.95);
   border-radius: 20px;
   padding: 50px;
   text-align: center;
@@ -1061,7 +1098,7 @@ header {
 
 .cta-btn {
   display: inline-block;
-  background: #000000;
+  background: rgba(66, 4, 90, 0.95);
   color: #ffffff;
   padding: 15px 40px;
   border-radius: 50px;
@@ -1078,7 +1115,7 @@ header {
   color: #000000;
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  border-color: #000000;
+  border-color:  rgba(66, 4, 90, 0.95);
 }
 
 /* Responsive Design */
@@ -1194,7 +1231,7 @@ header {
 /* Footer */
 
 footer {
-  background: linear-gradient(135deg, #000000, #333333);
+  background: linear-gradient(135deg, #0d3b66, #1e4a72);
   color: #ffffff;
   padding: 60px 8% 30px;
   margin-top: 40px;
@@ -1324,7 +1361,7 @@ footer {
 }
 
 .footer-nav a:before {
-  content: '→';
+  content: '~';
   position: absolute;
   left: 0;
   transition: transform 0.3s ease;
@@ -1564,7 +1601,7 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #0d3b66;
+    background: rgba(66, 4, 90, 0.95);
     position: absolute;
     top: 55px;
     right: 0;
@@ -1687,8 +1724,8 @@ body {
 }
 
 
-
-/* Loading Screen */
+/* 
+Loading Screen
 
 .loading {
 
@@ -1718,7 +1755,7 @@ body {
 
   transition: opacity 0.5s ease-out;
 
-}
+} */
 
 
 
@@ -1790,7 +1827,7 @@ body {
 
 header {
 
-  background: rgba(0, 0, 0, 0.95) !important; /* Black background for better font visibility */
+  background: rgba(66, 4, 90, 0.95) !important; /* Deep blue background representing Diaspora unity */
   backdrop-filter: blur(10px);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1802,7 +1839,7 @@ header {
 
 header.scrolled {
 
-  background: rgba(0, 0, 0, 0.98) !important; /* Keep black when scrolled */
+  background:rgba(66, 4, 90, 0.95) !important; /* Keep deep blue when scrolled */
   box-shadow: var(--shadow-md);
 
 }
@@ -1857,6 +1894,8 @@ header.scrolled {
 
   position: relative;
 
+  color: black;
+  font-weight: 100;
   overflow: hidden;
 
   background: white;
@@ -1917,7 +1956,7 @@ header.scrolled {
 
   box-shadow: var(--shadow-lg);
 
-  background: black;
+  background: #4d0d66;
 
 }
 
@@ -1958,17 +1997,18 @@ header.scrolled {
 .hero {
 
   background: 
-    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-    url("Img/afric.jpg");
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("Img/100+\ Unique\ Fundraising\ Ideas\ Guide.jfif");
   position: relative;
   background-size: cover; /* Ensures the image covers the entire container */
-  background-position: top; /* Centers the image horizontally and vertically */
+  background-position: bottom; /* Centers the image horizontally and vertically */
   background-repeat: no-repeat; /* Prevents image repetition */
   height: 80vh; /* Sets the hero section to full viewport height */
   width: 100%; /* Ensures the hero section takes full width */
   display: flex; /* Used for centering content within the hero section */
   justify-content: center; /* Centers content horizontally within the flex container */
   align-items: center; 
+background-blend-mode: multiply;
   overflow: hidden;
 
   z-index: 1;
@@ -2164,7 +2204,7 @@ header.scrolled {
 
   height: 4px;
 
-  background: #000000; /* Changed to black as requested */
+  background: rgba(66, 4, 90, 0.95) ; /* Changed to deep blue representing Diaspora */
 
   border-radius: 2px;
 
@@ -2186,7 +2226,7 @@ header.scrolled {
 
   height: 60px;
 
-  background: black;
+  background:  rgba(66, 4, 90, 0.95);
 
   color: white;
 
@@ -2231,7 +2271,7 @@ header.scrolled {
 .scroll-to-top:hover {
 
   background:white; 
-  color: black;
+  color: rgba(66, 4, 90, 0.95);
   font-size: 2rem;
 
   transform: translateY(-5px) scale(1.1);
@@ -2244,7 +2284,7 @@ header.scrolled {
 
 footer {
 
-  background: black;
+  background:  rgba(66, 4, 90, 0.95) ;
 
   position: relative;
 
@@ -2332,7 +2372,7 @@ footer {
 
 .social-icons a {
 
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+  background: linear-gradient(135deg, var, var(--primary-blue-dark));
 
   transition: all var(--transition);
 
@@ -2359,7 +2399,7 @@ footer {
 
   height: 100%;
 
- background: black;
+ background:  rgba(66, 4, 90, 0.95);
 
   opacity: 0;
 
@@ -2415,7 +2455,7 @@ footer {
 
 ::-webkit-scrollbar-thumb {
 
-  background: whitesmoke;
+  background:whitesmoke;
   border-radius: 5px;
 
 }
@@ -2424,7 +2464,7 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
 
-  background: white;
+  background:  whitesmoke
 
 }
 
