@@ -212,6 +212,60 @@ header {
 }
 
 
+/* Extra small devices (phones) */
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 10px;
+    font-size: 0.9rem;       /* smaller font for tiny screens */
+  }
+
+  .logo-text {
+    font-size: 0.9rem;       /* scale down logo text */
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;       /* slightly smaller hamburger */
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  /* Keep logo and hamburger spaced nicely */
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 10px 20px;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo image and text */
+  }
+
+  .logo-img {
+    height: 50px;
+    width: auto;
+  }
+
+  .logo-text {
+    font-size: 1.1rem; /* slightly smaller for tablet */
+  }
+
+  .nav-links {
+    display: none; /* hide nav links, keep hamburger */
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 25px;
+  }
+}
+
+
+
 
 .logo {
 
@@ -307,62 +361,23 @@ header {
 
   font-style: italic; /* Make logo font italic */
 }
+/* Center logo text on small screens */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* center everything horizontally */
+  }
 
+  .navbar .logo {
+    text-align: center;      /* center the logo text */
+  }
 
-
-/* Hero */
-
-.hero {
-
-  height: 75vh;
-
-  background: 
-
-    linear-gradient(rgba(3, 5, 7, 0.8), rgba(0, 2, 3, 0.925)),
-    url("Img/afric.jpg") center/cover no-repeat;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: center;
-
-  color: #ffffff;
-
-  padding: 0 20px;
-
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+  .navbar .menu {
+    display: none;           /* optionally hide menu on small screens */
+  }
 }
 
 
 
-.hero h1 {
-
-  font-size: 3rem;
-
-  margin-bottom: 15px;
-
-  color: #fff;
-
-}
-
-
-
-.hero p {
-
-  font-size: 1.3rem;
-
-  margin-bottom: 20px;
-
-  color: #fff;
-
-}
 
 
 
@@ -903,17 +918,17 @@ header {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
+  gap: 20px;        /* slightly smaller gap between cards */
+  margin-top: 30px; /* reduced margin */
 }
 
 .service-card {
   background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 20px;
+  padding: 20px 15px;  /* reduced padding to make card smaller */
+  border-radius: 15px; /* slightly smaller radius */
   text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  border: 2px solid #f0f0f0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* lighter shadow */
+  border: 1px solid #f0f0f0; /* slightly thinner border */
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -925,7 +940,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 3px;  /* slightly thinner line */
   background: linear-gradient(90deg, rgba(66, 4, 90, 0.95));
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -936,21 +951,26 @@ header {
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow:  rgba(66, 4, 90, 0.95);
-  border-color: rgba(66, 4, 90, 0.95);
+  transform: translateY(-8px);  /* smaller lift */
+  box-shadow: 0 8px 25px rgba(66, 4, 90, 0.4); /* subtle shadow on hover */
 }
 
+
 .service-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  width: 100%;
+  height: 300px; /* fix height for all images to be uniform */
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0; /* rounded top corners to match card */
+}
+
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover ensures the image fills the container without stretching */
   display: block;
 }
 
-.service-icon i {
-  font-size: 3rem;
-  color:  rgba(66, 4, 90, 0.95);
-}
 
 .service-card h4 {
   font-size: 1.3rem;
@@ -1720,8 +1740,9 @@ body {
   font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 
   overflow-x: hidden;
-
 }
+
+
 
 
 /* 
@@ -1994,48 +2015,102 @@ header.scrolled {
 
 /* Enhanced Hero Section */
 
+
+/* Hero */
+
+.hero {
+  top: 74px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  padding: 0 20px;
+
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+
+.hero h1 {
+
+  font-size: 3rem;
+
+  margin-bottom: 15px;
+
+  color: #fff;
+
+}
+
+
+
+.hero p {
+
+  font-size: 1.3rem;
+
+  margin-bottom: 20px;
+
+  color: #fff;
+
+}
+
 .hero {
 
   background: 
     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url("Img/fundraising-ideas.jpg");
+    url("Img/9\ Fun\,\ Easy\,\ and\ Safe\ Ways\ To\ Build\ Community\ Spirit.jfif");
   position: relative;
   background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the image horizontally and vertically */
+  background-position: top; /* Centers the image horizontally and vertically */
   background-repeat: no-repeat; /* Prevents image repetition */
-  height: 80vh; /* Sets the hero section to full viewport height */
-  width: 100%; /* Ensures the hero section takes full width */
+  height: 100vh; /* Sets the hero section to full viewport height */
   display: flex; /* Used for centering content within the hero section */
   justify-content: center; /* Centers content horizontally within the flex container */
   align-items: center; 
 background-blend-mode: multiply;
   overflow: hidden;
-
-  z-index: 1;
+   z-index: 1;
+  width: 100%;  /* force full viewport width */
+  margin: 0;     /* reset margin */
+  padding: 0;    /* reset padding */
 }
 
 
 
 .hero::before {
-
   content: '';
-
   position: absolute;
-
   top: 0;
-
   left: 0;
-
   right: 0;
-
   bottom: 0;
 
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-
-  animation: float 8s ease-in-out infinite;
-
+  /* Diagonal lines pattern */
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  
+  animation: floatLines 12s linear infinite;
 }
 
+@keyframes floatLines {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
 
 
 .hero-content {
@@ -2077,6 +2152,105 @@ background-blend-mode: multiply;
   margin-bottom: 2.5rem;
 
 }
+.hero-btn {
+
+  font-size: 1.1rem;
+
+  padding: 15px 35px;
+
+  border-radius: 50px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  box-shadow: var(--shadow-md);
+
+  transition: all var(--transition);
+
+}
+.hero-btn:hover {
+
+  background: #4d0d66;
+
+  color: white;
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--shadow-lg);
+
+}
+
+/* Phones only */
+@media (max-width: 600px) {
+  .hero {
+    height: 75vh; /* slightly shorter for phones */
+
+  }
+
+  .hero-img {
+    object-fit: contain; /* show full image without cropping */
+  }
+
+  .hero-content {
+    margin-top: 30px; /* push text down closer to center */
+    padding: 0 10px;  /* optional: small side padding */
+  }
+}
+/* Ensure hero button is visible and centered on phones */
+@media (max-width: 600px) {
+  .hero-btn{
+    display: inline-block;    /* make sure button shows */
+    margin-bottom: 20px;         /* push it slightly below text */
+    font-size: 1rem;          /* adjust size for small screens */
+    padding: 10px 20px;       /* comfortable tappable area */
+  }
+}
+/* Very small phones */
+@media (max-width: 320px) {
+  .hero {
+    height: auto;              /* let it expand with content */
+    min-height: 80vh;          /* maintain some height */
+    padding: 50px 10px 30px;   /* reduce padding */
+    background-size: cover;     /* fill the hero fully */
+    background-position: top;   /* keep top of image visible */
+  }
+
+  .hero-content {
+    margin-top: 10px;
+    padding: 0 8px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin-top: 15px;
+  }
+
+  /* Scale the overlay pattern */
+  .hero::before {
+    background-size: 30px 30px;  /* smaller pattern for tiny devices */
+  }
+}
+
+
 
 
 
@@ -2276,6 +2450,21 @@ background-blend-mode: multiply;
 
   transform: translateY(-5px) scale(1.1);
 
+}
+/* Scroll-to-Top Button Smaller on Phones */
+@media (max-width: 600px) {
+  .scroll-to-top {
+    width: 40px;       /* shrink the circle */
+    height: 40px;      /* shrink the circle */
+    font-size: 1rem;   /* shrink the arrow/icon */
+    bottom: 20px;      /* adjust distance from bottom */
+    right: 20px;       /* adjust distance from right */
+  }
+
+  .scroll-to-top:hover {
+    font-size: 1.2rem; /* keep hover arrow slightly bigger */
+    transform: translateY(-3px) scale(1.05); /* subtle hover effect */
+  }
 }
 
 
