@@ -33,23 +33,27 @@ body {
 
 
 /* Navbar */
-
 header {
-
-  background: purple; /* Deep blue background representing Diaspora unity */
-  backdrop-filter: blur(10px);
-  padding: 12px 0;
-
+  background: purple;       /* solid so nothing shows through */
+  color: #fff;
   position: fixed;
   top: 0;
-
+  left: 0;
   width: 100%;
-
   z-index: 1000;
+  transition: top 0.25s ease;
 
-  transition: all 0.3s;
+  padding: 16px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
 }
+
+/* Remove body padding so no white strip shows */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 
 
 
@@ -192,7 +196,6 @@ header {
   }
 
 }
-
 
 
 
@@ -448,9 +451,41 @@ header {
 }
 
 
+/* Default - Desktop */
+.logo-text {
+  font-size: 1.4rem;   /* slightly bigger than before */
+  font-weight: bold;
+  font-style: italic;
+  white-space: nowrap; /* keep in one line */
+}
 
+/* Tablets - 1024px and below */
+@media (max-width: 1024px) {
+  .logo-text {
+    font-size: 1.38rem;
+  }
+}
 
+/* Small tablets / large phones - 768px and below */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.8rem;
+  }
+}
 
+/* Regular phones - 600px and below */
+@media (max-width: 600px) {
+  .logo-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* Very small phones - 400px and below */
+@media (max-width: 400px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+}
 
 .btn {
 

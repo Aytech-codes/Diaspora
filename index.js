@@ -112,6 +112,33 @@ scrollBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+const header = document.querySelector('header');
+let lastScrollY = window.scrollY;
+let ticking = false;
+const TOP_REVEAL_THRESHOLD = 10;
+
+function handleScroll() {
+  const currentY = window.scrollY;
+
+  if (currentY <= TOP_REVEAL_THRESHOLD) {
+    header.style.top = '0';   // show when at top
+  } else if (currentY > lastScrollY) {
+    header.style.top = '0';   // scrolling down → keep visible
+  } else {
+    header.style.top = `-${header.offsetHeight}px`; // scrolling up → hide
+  }
+
+  lastScrollY = currentY;
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(handleScroll);
+    ticking = true;
+  }
+});
+
 
 
 // ================= NO PARALLAX =================
