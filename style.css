@@ -263,6 +263,42 @@ header {
     margin-left: 25px;
   }
 }
+/* Phones wider than 600px but narrower than 768px */
+@media (min-width: 601px) and (max-width: 767px) {
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    display: none; /* hide menu links */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger */
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+
+  .logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+}
 
 
 
