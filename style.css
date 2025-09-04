@@ -299,6 +299,30 @@ header {
     font-size: 1rem;
   }
 }
+/* Small phones (up to 480px) */
+@media (max-width: 480px) {
+  .nav-links {
+    display: none !important; /* hide nav links */
+  }
+
+  .menu-toggle {
+    display: block !important; /* show hamburger */
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+
+  .logo a {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px; /* smaller spacing */
+  }
+
+  .logo-text {
+    font-size: 1rem; /* smaller text for tiny screens */
+  }
+}
+
 
 
 
