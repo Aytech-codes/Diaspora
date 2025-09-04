@@ -210,115 +210,130 @@ header {
   margin: auto;
 
 }
-
-
-/* Extra small devices (phones) */
-@media (max-width: 600px) {
-  .nav-links {
-    gap: 10px;
-    font-size: 0.9rem;       /* smaller font for tiny screens */
-  }
-
-  .logo-text {
-    font-size: 0.9rem;       /* scale down logo text */
-  }
-
-  .menu-toggle {
-    font-size: 1.8rem;       /* slightly smaller hamburger */
-  }
+/* Default - Desktop */
+.logo-text {
+  font-size: 1.3rem;
 }
-@media (max-width: 1024px) and (min-width: 768px) {
-  /* Keep logo and hamburger spaced nicely */
-  .navbar {
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-    padding: 10px 20px;
-  }
 
-  .logo a {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* space between logo image and text */
-  }
+.nav-links {
+  display: flex; /* show links by default on desktop */
+}
 
-  .logo-img {
-    height: 50px;
-    width: auto;
-  }
+.menu-toggle {
+  display: none; /* hide hamburger on desktop */
+}
 
+/* Tablets - 1024px and below */
+@media (max-width: 1024px) {
   .logo-text {
-    font-size: 1.1rem; /* slightly smaller for tablet */
+    font-size: 1rem;
   }
 
   .nav-links {
-    display: none; /* hide nav links, keep hamburger */
+    display: none; /* hide nav links */
   }
 
   .menu-toggle {
     display: block;
     font-size: 2rem;
     cursor: pointer;
-    margin-left: 25px;
-  }
-}
-/* Phones wider than 600px but narrower than 768px */
-@media (min-width: 601px) and (max-width: 767px) {
-  .navbar {
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-    padding: 10px 15px;
-  }
-
-  .nav-links {
-    display: none; /* hide menu links */
-  }
-
-  .menu-toggle {
-    display: block; /* show hamburger */
-    font-size: 2rem;
-    cursor: pointer;
-    margin-left: 30px;
   }
 
   .logo a {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* spacing between image and text */
+  }
+
+  .logo-img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+/* Small tablets / large phones - 768px and below */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 0.95rem;
+  }
+
+  .logo-img {
+    height: 45px;
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Regular phones - 600px and below */
+@media (max-width: 600px) {
+  .logo-text {
+    font-size: 0.9rem;
   }
 
   .logo-img {
     height: 40px;
-    width: auto;
   }
 
-  .logo-text {
-    font-size: 1rem;
-  }
-}
-/* Small phones (up to 480px) */
-@media (max-width: 480px) {
   .menu-toggle {
-    display: block !important; /* show hamburger */
-    font-size: 1.8rem;
-    cursor: pointer;
-    margin-left: 30px;
-  }
-
-  .logo a {
-    flex-direction: row;
-    align-items: center;
-    gap: 5px; /* smaller spacing */
-  }
-
-  .logo-text {
-    font-size: 1rem; /* smaller text for tiny screens */
+    font-size: 1.6rem;
   }
 }
 
+/* Very small phones - 400px and below */
+@media (max-width: 400px) {
+  .logo-text {
+    font-size: 0.8rem;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+
+  .menu-toggle {
+    font-size: 1.5rem;
+  }
+}
+/* Default - Desktop */
+.menu-toggle {
+  display: none; /* hide on desktop */
+  margin-left: 20px; /* default spacing */
+}
+
+/* Tablets - 1024px and below */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 20px; /* spacing from logo */
+  }
+}
+
+/* Small tablets / large phones - 768px and below */
+@media (max-width: 768px) {
+  .menu-toggle {
+    font-size: 1.8rem;
+    margin-left: 15px; /* slightly smaller spacing */
+  }
+}
+
+/* Regular phones - 600px and below */
+@media (max-width: 600px) {
+  .menu-toggle {
+    font-size: 1.6rem;
+    margin-left: 15px;
+  }
+}
+
+/* Very small phones - 400px and below */
+@media (max-width: 400px) {
+  .menu-toggle {
+    font-size: 1.5rem;
+    margin-left: 10px; /* smallest spacing */
+  }
+}
 
 
 
