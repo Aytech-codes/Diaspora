@@ -301,10 +301,6 @@ header {
 }
 /* Small phones (up to 480px) */
 @media (max-width: 480px) {
-  .nav-links {
-    display: none !important; /* hide nav links */
-  }
-
   .menu-toggle {
     display: block !important; /* show hamburger */
     font-size: 1.8rem;
