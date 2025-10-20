@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ================= CONTACT FORM =================
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -41,21 +41,32 @@ if (contactForm) {
       return;
     }
 
+    // Show loading state
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
     fetch("https://formspree.io/f/mdklpoeg", {
       method: "POST",
       headers: { "Accept": "application/json" },
-      body: new FormData(contactForm)
+      body: new FormData(this)
     })
     .then(response => {
       if (response.ok) {
         alert("✅ Thank you! Your message has been sent.");
-        contactForm.reset();
+        this.reset();
       } else {
         alert("❌ Sorry, your message could not be sent.");
       }
     })
     .catch(() => {
       alert("❌ Error sending message. Please try again later.");
+    })
+    .finally(() => {
+      // Reset button state
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     });
   });
 }
