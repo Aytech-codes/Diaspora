@@ -27,6 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ================= CONTACT FORM =================
+// FIXED: Changed selector from '.contact-form' to '.contact-form form' to target the actual form element
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
@@ -41,7 +42,7 @@ if (contactForm) {
       return;
     }
 
-    // Show loading state
+    // ADDED: Show loading state to prevent multiple submissions and give user feedback
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending...';
@@ -50,6 +51,7 @@ if (contactForm) {
     fetch("https://formspree.io/f/mdklpoeg", {
       method: "POST",
       headers: { "Accept": "application/json" },
+      // FIXED: Changed from 'new FormData(contactForm)' to 'new FormData(this)' to properly reference the form
       body: new FormData(this)
     })
     .then(response => {
@@ -64,7 +66,7 @@ if (contactForm) {
       alert("❌ Error sending message. Please try again later.");
     })
     .finally(() => {
-      // Reset button state
+      // ADDED: Always reset button state regardless of success or failure
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
     });
